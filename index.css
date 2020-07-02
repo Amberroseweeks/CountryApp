@@ -1,0 +1,85 @@
+body {
+  background-color: #f6fafb;
+  font-size: 16px; }
+
+.container {
+  width: 300px;
+  margin: auto;
+  display: block;
+  margin-top: 1em;
+display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+#input-content {
+    background-color: #ecf0f1;
+  display: block;
+    height: relative;
+    margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: #d8dcdd 0 5px 10px;
+  -moz-box-shadow: #d8dcdd 0 5px 10px;
+  box-shadow: #d8dcdd 0 5px 10px; 
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+#content {
+  background-color: #ecf0f1;
+  display: block;
+  overflow: hidden;
+  padding: 30px;
+    height: relative;
+    margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: #d8dcdd 0 5px 10px;
+  -moz-box-shadow: #d8dcdd 0 5px 10px;
+  box-shadow: #d8dcdd 0 5px 10px; 
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.info {
+    margin-top: 10px;
+  position: relative;
+  font-family: 'Merriweather Sans';
+  color: #808080; 
+        flex-direction: column;
+    align-content: center;
+
+}
+
+.country-name {
+
+  position: relative;
+  font-family: 'Merriweather Sans';
+  color: #333333; 
+        flex-direction: column;
+    align-content: center;
+    font-weight: 900;
+    font-size: 30px;
+
+}
+
+.image-container {
+    width: 300px;
+    height: 200px;
+    background-color: #e6e6e6;
+        flex-direction: column;
+    align-content: center;
+}
+
+.input {
+    margin: 20px;
+}
