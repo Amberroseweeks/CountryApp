@@ -1,3 +1,13 @@
+// Build a single page app that shows:
+// a. - whatever country the user inserts printed on the page;
+// b. - the capital of this country;
+// c. - population of this country:
+// d. - any other information that seems interesting to you
+// e. - the flag of this country
+
+
+
+
 //$(document).ready(function() {
 //    
 //    submit.addEventListener("click", searchAlbum)
@@ -61,6 +71,11 @@ function displayCountryData (data) {
         population.innerHTML = "Population: " + data[i].population
         countryContainer.appendChild(population)
         population.setAttribute("class", "info")
+        
+    let language = document.createElement('div')
+        language.innerHTML = "Language(s): " + data[i].languages[0].name
+        countryContainer.appendChild(language)
+        language.setAttribute("class", "info")
     
     let flag = document.createElement('div')
         flag.style.width = '250px';
@@ -93,14 +108,6 @@ function displayCountryData (data) {
 //    })
 //                
 //    })
-
-
-// Build a single page app that shows:
-// a. - whatever country the user inserts printed on the page;
-// b. - the capital of this country;
-// c. - population of this country:
-// d. - any other information that seems interesting to you
-// e. - the flag of this country
 
 
 
