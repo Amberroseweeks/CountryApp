@@ -59,7 +59,8 @@ function displayCountryData (data) {
         population.innerHTML = "Population: " + data[i].population
         countryContainer.appendChild(population)
         population.setAttribute("class", "info")
-    
+
+        
     let flag = document.createElement('div')
         flag.style.width = '250px';
         flag.style.height = '150px';
@@ -68,6 +69,20 @@ function displayCountryData (data) {
         countryContainer.appendChild(flag)
         flag.setAttribute("class", "image-container")
         
+    let translationDE = document.createElement('div')
+        translationDE.innerHTML = "DE: " + data[i].translations.de
+        countryContainer.appendChild(translationDE)
+        translationDE.setAttribute("class", "info")
+        
+    let translationFR = document.createElement('div')
+        translationFR.innerHTML = "FR: " + data[i].translations.fr
+        countryContainer.appendChild(translationFR)
+        translationFR.setAttribute("class", "info")
+        
+    let translationJA = document.createElement('div')
+        translationJA.innerHTML = "JA: " + data[i].translations.ja
+        countryContainer.appendChild(translationJA)
+        translationJA.setAttribute("class", "info")
 }
 }
 
