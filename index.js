@@ -35,9 +35,15 @@ function displayCountryData (data) {
         countryContainer.appendChild(capitalName)
         capitalName.setAttribute("class", "info")
 
+    let num = data[i].population
+    
+    commaNumber = Number(num.toFixed(0)).toLocaleString().split(/\s/).join(',')
+    console.log(commaNumber)
+        
     let population = document.createElement('div')
-        population.innerHTML = "Population: " + data[i].population
+        population.innerHTML = "Population: " + commaNumber
         countryContainer.appendChild(population)
+        console.log(data[0].population)
         population.setAttribute("class", "info")
     
     let flag = document.createElement('div')
@@ -47,6 +53,59 @@ function displayCountryData (data) {
         flag.style.backgroundSize = "100% 100%"
         countryContainer.appendChild(flag)
         flag.setAttribute("class", "image-container")
+        
+        
+        
+                    let translationsButtonDE= document.createElement("BUTTON");
+    let translationsButtontxtDE=document.createTextNode('DE');
+        translations.appendChild(translationsButtonDE)
+        translationsButtonDE.appendChild(translationsButtontxtDE)
+        translationsButtonDE.setAttribute("id","DE")
+
+        translationsButtonDE.addEventListener("click",function (){
+                let translationDE = document.createElement('div')
+        translationDE.innerHTML = "DE: " + data[i].translations.de
+        countryContainer.appendChild(translationDE)
+        translationDE.setAttribute("class", "info")
+            
+        }
+        
+        )
+    let translationsButtonFR= document.createElement("BUTTON");
+    let translationsButtontxtFR=document.createTextNode('FR');
+        translations.appendChild(translationsButtonFR)
+        translationsButtonFR.appendChild(translationsButtontxtFR)
+        translationsButtonFR.setAttribute("id","FR")
+        
+        translationsButtonFR.addEventListener("click",function(){
+                let translationFR = document.createElement('div')
+        translationFR.innerHTML = "FR: " + data[i].translations.fr
+        countryContainer.appendChild(translationFR)
+        translationFR.setAttribute("class", "info")
+            
+            
+        }
+        
+        
+        )
+
+    let translationsButtonJA= document.createElement("BUTTON");
+    let translationsButtontxtJA=document.createTextNode('JA');
+        translations.appendChild(translationsButtonJA)
+        translationsButtonJA.appendChild(translationsButtontxtJA)
+        translationsButtonJA.setAttribute("id","JA")
+        
+                translationsButtonJA.addEventListener("click",function(){
+                let translationJA = document.createElement('div')
+        translationJA.innerHTML = "JA: " + data[i].translations.ja
+        countryContainer.appendChild(translationJA)
+        translationJA.setAttribute("class", "info")
+            
+            
+        }
+        
+        
+        )
         
 }
 }
