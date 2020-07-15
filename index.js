@@ -45,7 +45,8 @@ function displayCountryData (data) {
         countryContainer.appendChild(population)
         console.log(data[0].population)
         population.setAttribute("class", "info")
-    
+
+        
     let flag = document.createElement('div')
         flag.style.width = '250px';
         flag.style.height = '150px';
@@ -53,10 +54,12 @@ function displayCountryData (data) {
         flag.style.backgroundSize = "100% 100%"
         countryContainer.appendChild(flag)
         flag.setAttribute("class", "image-container")
+    
+    let translations = document.createElement('div')
+        countryContainer.appendChild(translations)
+        translations.setAttribute("class", "info")
         
-        
-        
-                    let translationsButtonDE= document.createElement("BUTTON");
+    let translationsButtonDE= document.createElement("BUTTON");
     let translationsButtontxtDE=document.createTextNode('DE');
         translations.appendChild(translationsButtonDE)
         translationsButtonDE.appendChild(translationsButtontxtDE)
@@ -106,7 +109,12 @@ function displayCountryData (data) {
         
         
         )
+
+
         
+
+        
+
 }
 }
 
