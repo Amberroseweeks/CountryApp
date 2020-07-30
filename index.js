@@ -7,6 +7,7 @@ let submit = document.getElementById("submit")
 submit.addEventListener ("click", countries)
 
 function countries (){
+    let gdpList =[]
     $.ajax({
         url: "https://restcountries.eu/rest/v2/name/" + input.value,
         success: function(countryData) {
@@ -14,7 +15,20 @@ function countries (){
             displayCountryData(countryData)
         }
     })
-}
+  /*  var settings = {
+	       "async": true,
+	       "crossDomain": true,
+	       "url": "https://raw.githubusercontent.com/OggiDanailov/gdp-data/master/data.json",
+	       "method": "GET",
+        }
+        $.ajax(settings).done(function (response) {
+        console.log(response)
+        for (var i = 0; i < response.data.length; i++){
+            console.log(response["Country Name"])
+        }
+            displayGDPData(response)
+    });*/
+
 
 function displayCountryData (data) {
 
@@ -72,7 +86,6 @@ function displayCountryData (data) {
         translationDE.setAttribute("class", "info")
             
         }
-        
         )
     let translationsButtonFR= document.createElement("BUTTON");
     let translationsButtontxtFR=document.createTextNode('FR');
@@ -85,12 +98,7 @@ function displayCountryData (data) {
         translationFR.innerHTML = "FR: " + data[i].translations.fr
         countryContainer.appendChild(translationFR)
         translationFR.setAttribute("class", "info")
-            
-            
-        }
-        
-        
-        )
+        })
 
     let translationsButtonJA= document.createElement("BUTTON");
     let translationsButtontxtJA=document.createTextNode('JA');
@@ -103,18 +111,45 @@ function displayCountryData (data) {
         translationJA.innerHTML = "JA: " + data[i].translations.ja
         countryContainer.appendChild(translationJA)
         translationJA.setAttribute("class", "info")
-            
-            
-        }
-        
-        
-        )
+        })
 
-
+    let gdpButton= document.createElement("BUTTON");
+    let gdpButtonTxt=document.createTextNode('GDP');
+        translations.appendChild(gdpButton)
+        gdpButton.appendChild(gdpButtonTxt)
+        gdpButton.setAttribute("id","GDP")
         
+                gdpButton.addEventListener("click",function(){
+                    returnGDP("https://raw.githubusercontent.com/OggiDanailov/gdp-data/master/data.json")
+                let gdpNumber = document.createElement('div')
+        gdpNumber.innerHTML = "GDP: "
+        countryContainer.appendChild(gdpNumber)
+        gdpNumber.setAttribute("class", "info")
+                    
+  /*                              function returnGDP(url){
+                    $.ajax({
+                        url: url,
+                        success: function(gdpResponse){
+                            console.log(JSON.parse(gdpResponse));
+                            let parsed = JSON.parse(gdpResponse);
+                            
+                            for(let j =0; j<parsed.length; j++){
+                                if(parsed[j]["Country Name"] === input.value){
+                                    $(gdpNumber).html(parsed[j][2017]);
+                                }
+                            }
+                        }
+                    })
+                    
+                    
+                }*/
+        })
 
-        
-
+}
+    
+    
+    
+    
 }
 }
 
