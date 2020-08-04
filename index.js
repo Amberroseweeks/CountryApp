@@ -126,7 +126,7 @@ function displayCountryData (data) {
         countryContainer.appendChild(gdpNumber)
         gdpNumber.setAttribute("class", "info")
                     
-  /*                              function returnGDP(url){
+                                function returnGDP(url){
                     $.ajax({
                         url: url,
                         success: function(gdpResponse){
@@ -135,14 +135,14 @@ function displayCountryData (data) {
                             
                             for(let j =0; j<parsed.length; j++){
                                 if(parsed[j]["Country Name"] === input.value){
-                                    $(gdpNumber).html(parsed[j][2017]);
+                                    $(gdpNumber).html("GDP:" + parsed[j][2017]);
                                 }
                             }
                         }
                     })
                     
                     
-                }*/
+                }
         })
 
 }
