@@ -39,9 +39,7 @@ function displayCountryData (data) {
     for (let i=0; i<data.length; i++) {
         currentCountry =data[0].name
         console.log("currentCountry" + currentCountry)
-    let countryContainer = document.createElement('div')
-    document.body.appendChild(countryContainer)
-        countryContainer.setAttribute("id","content")
+    let countryContainer = document.getElementById('content')
 
     let countryName = document.createElement('h2')
         countryName.innerHTML = data[0].name
@@ -158,26 +156,28 @@ function displayCountryData (data) {
                             var values = Object.values(country)
                             var keys = Object.keys(country)
                               $(gdpNumber).html("GDP:" + commafy(country[2017]));
+                              for(let i = 0; i < values.length; i++) {
                                 if(values[i] !== "" && typeof values[i] == "number"){
                                     gdpValueArray.push(values[i])
                                     gdpKeyArray.push(keys[i])
                                 }
+                              }
+
+                              console.log(gdpValueArray)
+                              console.log(gdpKeyArray)
                           }
                           
                           
                           
                           
                       })      
-                            
-                            
-                            
-                    
-                        }
-                    })
 				Plotly.newPlot( TESTER, [{
 				x: gdpKeyArray,
 				y: gdpValueArray }], {
 				margin: { t: 10 } } );
+                        }
+                    })
+
                 }
         })
 
