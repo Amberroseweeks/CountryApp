@@ -15,7 +15,7 @@ display: flex;
 #input-content {
     background-color: #ecf0f1;
   display: block;
-    height: relative;
+    height: 100px;
     margin: 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -55,21 +55,9 @@ display: flex;
   position: relative;
   font-family: 'Merriweather Sans';
   color: #808080; 
-    flex-direction: column;
+        flex-direction: column;
     align-content: center;
-    margin-bottom: 10px;
-   
 
-}
-
-.input-description {
-
-  position: relative;
-  font-family: 'Merriweather Sans';
-  color: #808080; 
-    flex-direction: column;
-    align-content: center;
-    padding: 10px;
 }
 
 .country-name {
@@ -77,20 +65,19 @@ display: flex;
   position: relative;
   font-family: 'Merriweather Sans';
   color: #333333; 
-    flex-direction: column;
+        flex-direction: column;
     align-content: center;
     font-weight: 900;
     font-size: 30px;
-    margin: 5px;
 
 }
 
 .image-container {
-    width: relative;
+    width: 300px;
     height: 200px;
+    background-color: #e6e6e6;
         flex-direction: column;
     align-content: center;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .input {
